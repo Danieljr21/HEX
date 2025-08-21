@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "name": "Spaghetti and Turkey",
+        "price": "N5000",
+        "image": "asset/herohex.png"
+    },
+    {
+        "id": 2,
+        "name": "Jellof rice and Beef",
+        "price": "N5000",
+        "image": "asset/herohex.png"
+    },
+    {
+        "id": 3,
+        "name": "Jellof rice and Turkey",
+        "price": "N5000",
+        "image": "asset/herohex.png"
+    },
+    {
+        "id": 4,
+        "name": "Chips and Chicken",
+        "price": "N5000",
+        "image": "asset/herohex.png"
+    },
+    {
+        "id": 5,
+        "name": "Fried rice and Chicken",
+        "price": "N5000",
+        "image": "asset/herohex.png"
+    },
+    {
+        "id": 6,
+        "name": "White soup",
+        "price": "N5000",
+        "image": "asset/herohex.png"
+    },
+    {
+        "id": 7,
+        "name": "Chicken Burger",
+        "price": "N5000",
+        "image": "asset/herohex.png"
+    }
+]
