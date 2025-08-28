@@ -235,7 +235,7 @@ h3 {
   flex-basis: 100px;
   background: var(--PURE-WHITE);
   border: .1rem solid var(--gold-finger);
-  /* padding: 0 1rem 1rem 1rem; */
+   padding: 0 1rem 1rem 1rem; 
   border-radius: 2rem;
   box-shadow:
     rgba(0, 0, 0, 0.05) 8px 8px 8px,
@@ -263,7 +263,7 @@ h4 {
 .cart-tab {
   background: var(--HINT-YELLOW);
   position: fixed;
-  inset: 0 0 0 auto;
+  inset: 0 -100% 0 auto;
   width: 25rem;
   padding-block: 2rem;
   display: flex;
@@ -273,18 +273,19 @@ h4 {
   z-index: 99;
   box-shadow: 
   rgba(0, 0, 0, 0.1) -10px -10px 20px;
-  /* transition: 3s ease-in-out; for when my cart icon click starts working */
+   transition: 3s ease-in-out; 
 }
 
   .cart-tab-active{
   inset: 0 0 0 auto;
-}   */
+}   
 
 .cart-list {
   flex: 1;
   width: 100%;
   margin-top: 1.5rem;
-    overflow: auto;  
+  max-height: 400px;
+  overflow: auto;  
    /* how will i make it sroll and also make my value scroll */
 } 
 
@@ -359,9 +360,6 @@ width: 0;
 
 /* SECTION THREE */
 
-/* .review-container{
-   background: red; 
-} */
 
 .review-container {
   width: 650px;

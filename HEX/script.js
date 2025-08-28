@@ -42,23 +42,92 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 
- const cartIcon = document.querySelector('.cart-icon');
- const cartTab = document.querySelector('.cart-tab');
- const closeBtn =document.querySelector('.close-btn');
+const cartIcon = document.querySelector('.cart-icon');
+const cartTab = document.querySelector('.cart-tab');
+const closeBtn = document.querySelector('.close-btn');
+const cardList = document.querySelector('.card-list');
 
-  cartIcon.addEventListener('click', ()=> cartTab.classlist.add('cart-tab-active'));
-// my cart icon click is not working.
-closeBtn.addEventListener('click', () => cartTab.classList.remove('cart-tab-active'));
+cartIcon.addEventListener('click', () => 
+    cartTab.classList.add('cart-tab-active')
+);
 
-let productList =[];
+closeBtn.addEventListener('click', () => 
+    cartTab.classList.remove('cart-tab-active')
+);
 
 
-const initApp = () =>{
- fetch('product.json').then
- (response => response.json()).then
- (data =>{
-    productList = data;
- })
-}
+
+
+
+
+let productList = [];
+
+
+const cardContainer = document.querySelector('.wrapper.p-top.flex.gap-3'); 
+
+const showCards = () => {
+  if (!cardContainer) return; 
+  cardContainer.innerHTML = '';
+
+  productList.forEach(product => {
+    const orderCard = document.createElement('div');
+    orderCard.classList.add('order-card');
+
+    orderCard.innerHTML = `
+      <div class="card-image">
+        <img src="asset/indomie.jpg">
+      </div>
+      <h4>double beef burger</h4>
+      <h4 class="price">N5000</h4>
+      <a href="#" class="btn">Add to cart</a>
+    `;
+
+    cardContainer.appendChild(orderCard);
+  });
+};
+
+const initApp = () => {
+  fetch('products.json')
+    .then(response => response.json())
+    .then(data => {
+      productList = data;
+      showCards();
+    });
+};
 
 initApp();
+
+
+
+// let productList = [];
+
+// const showCards = () =>{
+
+//   productList.forEach(product =>{
+   
+//     const orderCard = document.createElement('div');
+//     orderCard.classList.add('order-card');
+
+//     orderCard.innerHTML ='
+//     <div class="card-image">
+//               <img src="asset/indomie.jpg">
+//             </div>
+//             <h4>double beef burger</h4>
+//             <h4 class="price">N5000</h4>
+//             <a href="#" class="btn">Add to cart</a>
+          
+//     '
+
+//   })
+// }
+
+// const initApp = () => {
+//     fetch('products.json')
+//         .then(response => response.json())
+//         .then(data => {
+//             productList = data;
+//             showCards();
+//         });
+// }
+
+// initApp();
